@@ -7,13 +7,13 @@ CONTROL SYSTEM FOR MORPHING ELEVON CONTROL SURFACE", 2019 THESIS.
 FILE UTMOST REVIEW DONE ON (03.01.2021) BY ARTUR K.
 ***********************************************************************/
 
-#ifndef FCONTROLLER_SERIAL_PORT_HPP
-#define FCONTROLLER_SERIAL_PORT_HPP
+#ifndef ATL_SERIAL_PORT_HPP
+#define ATL_SERIAL_PORT_HPP
 
 typedef unsigned int uint32;
 const static int MAX_ARDUINO_WAIT_TIME_MS = 2000;
 
-namespace FController
+namespace atl
 {
 	//-----------------------------------------------------------------------
 	// BOUD RATE
@@ -78,5 +78,5 @@ namespace FController
 		return this->readSerialPort((void*)pObject, sizeof(T));
 	}
 
-} // namespace FController
-#endif // !FCONTROLLER_SERIAL_PORT_HPP
+} // namespace atl
+#endif // !ATL_SERIAL_PORT_HPP

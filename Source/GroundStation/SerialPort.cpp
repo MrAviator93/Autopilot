@@ -12,7 +12,7 @@
 // https://github.com/manashmndl/SerialPort/blob/master/src/SerialPort.cpp
 //-----------------------------------------------------------------------
 
-namespace FController
+namespace atl
 {
 	CSerialPort::CSerialPort(const char* pPortName, BoudRate boudRate)
 	{
@@ -158,4 +158,4 @@ namespace FController
 		return this->m_initialized;
 	}
 
-} // namespace FController
+} // namespace atl
