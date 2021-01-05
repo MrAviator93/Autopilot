@@ -121,7 +121,7 @@ namespace atl
 	//-----------------------------------------------------------------------
 
 	template<class T>
-	class CPIDControllerT
+	class TPIDController
 	{
 	public:
 		CPIDControllerT(T dt, T max, T min, T Kp, T Kd, T Ki) 
@@ -198,7 +198,7 @@ namespace atl
 
 	using CPController		= TPController<scalar>;
 	using CPIController		= TPIController<scalar>;
-	using CPIDController	= CPIDControllerT<scalar>;
+	using CPIDController		= TPIDController<scalar>;
 
 } // namespace atl
 #endif // !ATL_CONTROLLERS_HPP
