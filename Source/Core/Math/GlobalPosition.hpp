@@ -1,11 +1,11 @@
 /***********************************************************************
 FILE GLOBALPOSITION.H CONTAINS GLOBAL POSITION OBJECT IMPLEMENTATION
 
-FILE UTMOST REVIEW DONE ON (04.01.2021) BY ARTUR K. 
+FILE UTMOST REVIEW DONE ON (06.01.2021) BY ARTUR K. 
 ***********************************************************************/
 
-#ifndef GLOBAL_POSITION_HPP
-#define GLOBAL_POSITION_HPP
+#ifndef ATL_GLOBAL_POSITION_HPP
+#define ATL_GLOBAL_POSITION_HPP
 
 #include "Core.hpp"
 
@@ -56,4 +56,4 @@ namespace atl
 	};
 
 } // namespace atl
-#endif // !GLOBAL_POSITION_HPP
+#endif // !ATL_GLOBAL_POSITION_HPP

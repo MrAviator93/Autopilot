@@ -198,7 +198,7 @@ namespace atl
 
 	using CPController		= TPController<scalar>;
 	using CPIController		= TPIController<scalar>;
-	using CPIDController		= TPIDController<scalar>;
+	using CPIDController	= TPIDController<scalar>;
 
 } // namespace atl
 #endif // !ATL_CONTROLLERS_HPP
