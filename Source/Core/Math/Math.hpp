@@ -6,7 +6,7 @@ https://www.igismap.com/formula-to-find-bearing-or-heading-angle-between-two-poi
 https://www.movable-type.co.uk/scripts/latlong.html
 https://www.sunearthtools.com/tools/distance.php
 
-FILE UTMOST REVIEW DONE ON 08.01.2021) BY ARTUR K. 
+FILE UTMOST REVIEW DONE ON (10.01.2021) BY ARTUR K. 
 ***********************************************************************/
 
 #ifndef ATL_MATH_HPP
@@ -35,7 +35,7 @@ namespace atl
 	const static scalar SPECIFIC_GAS_AIR_CONSTANT 			= 287.0;					// R [J/kg]
 
 	//-----------------------------------------------------------------------
-	// FMATH
+	// MATH
 	//
 	// Contains additional mathematical functions.
 	//-----------------------------------------------------------------------

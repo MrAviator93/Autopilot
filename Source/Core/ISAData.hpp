@@ -1,7 +1,7 @@
 ﻿/***********************************************************************
 FILE ISADATA.HPP CONTAINS INTERNATIONAL STANDARD ATMOSPHERE DATA ENTRIES
 
-FILE UTMOST REVIEW DONE ON (08.01.2021) BY ARTUR K. 
+FILE UTMOST REVIEW DONE ON (10.01.2021) BY ARTUR K. 
 ***********************************************************************/
 
 #ifndef ATL_ISA_DATA_HPP

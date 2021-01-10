@@ -1,7 +1,7 @@
 /***********************************************************************
 FILE GLOBALPOSITION.H CONTAINS GLOBAL POSITION OBJECT IMPLEMENTATION
 
-FILE UTMOST REVIEW DONE ON (08.01.2021) BY ARTUR K. 
+FILE UTMOST REVIEW DONE ON (10.01.2021) BY ARTUR K. 
 ***********************************************************************/
 
 #ifndef ATL_GLOBAL_POSITION_HPP
@@ -21,17 +21,17 @@ namespace atl
 	{
 		GlobalPosition() = default;
 
-		GlobalPosition(const GlobalPosition& globalPos);
+		GlobalPosition( const GlobalPosition& globalPos );
 
-		GlobalPosition(double latitude, double longitude);
+		GlobalPosition( double latitude, double longitude );
 
 		GlobalPosition(
 			float degLat, float minLat, float secLat,
-			float degLon, float minLon, float secLon);
+			float degLon, float minLon, float secLon );
 
 		~GlobalPosition() = default;
 
-		GlobalPosition& operator= (const GlobalPosition& globalPos);
+		GlobalPosition& operator= ( const GlobalPosition& globalPos );
 
 		double latitude{ 0.0 };
 		double longtitude{ 0.0 };

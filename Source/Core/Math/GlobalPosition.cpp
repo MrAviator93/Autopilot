@@ -2,13 +2,13 @@
 
 namespace atl
 {
-	GlobalPosition::GlobalPosition(const GlobalPosition& globalPos)
+	GlobalPosition::GlobalPosition( const GlobalPosition& globalPos )
 	{
 		latitude = globalPos.latitude;
 		longtitude = globalPos.longtitude;
 	}
 
-	GlobalPosition::GlobalPosition(double latitude, double longitude)
+	GlobalPosition::GlobalPosition( double latitude, double longitude )
 	{
 		this->latitude = latitude;
 		this->longtitude = longitude;
@@ -16,18 +16,18 @@ namespace atl
 
 	GlobalPosition::GlobalPosition(
 		float degLat, float minLat, float secLat,
-		float degLon, float minLon, float secLon)
+		float degLon, float minLon, float secLon )
 	{
-		latitude = static_cast<double>(degLat) +
-			static_cast<double>(minLat / 60.0) +
-			static_cast<double>(secLat / 3600.0);
+		latitude = static_cast< double >( degLat ) +
+			static_cast< double >( minLat / 60.0) +
+			static_cast< double >( secLat / 3600.0);
 
-		longtitude = static_cast<double>(degLon) +
-			static_cast<double>(minLon / 60.0) +
-			static_cast<double>(secLon / 3600.0);
+		longtitude = static_cast< double >( degLon ) +
+			static_cast< double >( minLon / 60.0)  +
+			static_cast< double >( secLon / 3600.0 );
 	}
 
-	GlobalPosition& GlobalPosition::operator=(const GlobalPosition& globalPos)
+	GlobalPosition& GlobalPosition::operator=( const GlobalPosition& globalPos )
 	{
 		latitude = globalPos.latitude;
 		longtitude = globalPos.longtitude;
