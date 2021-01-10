@@ -17,7 +17,7 @@ FILE UTMOST REVIEW DONE ON (10.01.2020) BY ARTUR K.
 namespace atl
 {
 	using Clock			= std::chrono::high_resolution_clock;
-	using TimePoint		= std::chrono::time_point< std::chrono::high_resolution_clock >;
+	using TimePoint		= std::chrono::time_point< Clock >;
 
 	//-----------------------------------------------------------------------
 	// TIMER
