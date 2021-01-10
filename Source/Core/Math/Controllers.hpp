@@ -42,11 +42,13 @@ namespace atl
 		{
 			if (value < min) value = min;
 			if (value > max) value = max;
+
+			// ***** TODO: Instead do:
+			// value = std::clamp( value, min, max );
 		}
 
 	private:
-		// Gains
-		T m_Kp;
+		T m_Kp; // Proportional term gain
 	};
 
 
@@ -97,11 +99,8 @@ namespace atl
 
 	private:
 		T m_dt; // Loop interval time (regulation period)
-
-		// Gains
 		T m_Kp; // Proportional controller gain
 		T m_Ki; // Integral controller gain
-
 		T m_integral;
 	};
 
@@ -168,7 +167,7 @@ namespace atl
 			return controllerOutput;
 		}
 
-		// ****** TODO: Replace by std::cap !
+		// ****** TODO: Replace by std::clamp !
 		void cap( T& value, T min, T max )
 		{
 			if (value < min) value = min;
@@ -183,11 +182,9 @@ namespace atl
 	private:
 		T m_dt; // Loop interval time
 
-		// Limits
 		T m_max;
 		T m_min;
 
-		// Gains
 		T m_Kp; // Proportional controller gain
 		T m_Kd; // Derivative controller gain
 		T m_Ki; // Integral controller gain
