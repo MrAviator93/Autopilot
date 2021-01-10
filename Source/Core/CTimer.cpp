@@ -14,7 +14,7 @@ namespace atl
 
 	double CTimer::getElapsedTimeS()
 	{
-		double result = static_cast<double>( getElapsedTimeUs() ) / 1000000.0;
+		double result = static_cast< double >( getElapsedTimeUs() ) / 1000000.0;
 		return result;	
 	}
 
