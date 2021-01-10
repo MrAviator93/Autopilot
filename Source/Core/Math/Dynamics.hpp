@@ -1,7 +1,7 @@
 ﻿/***********************************************************************
 FILE DYNAMICS.HPP CONTAINS DYNAMIC ADDITIONS
 
-FILE UTMOST REVIEW DONE ON (04.01.2021) BY ARTUR K. 
+FILE UTMOST REVIEW DONE ON (08.01.2021) BY ARTUR K. 
 ***********************************************************************/
 
 #ifndef ATL_DYNAMICS_HPP
@@ -105,5 +105,6 @@ namespace atl
 			const scalar liftDuetoAngleOfAttack,
 			const scalar wingAspectRatio);
 	};
+
 } // namespace atl
 #endif // !ATL_DYNAMICS_HPP

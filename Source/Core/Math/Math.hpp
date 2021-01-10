@@ -6,13 +6,14 @@ https://www.igismap.com/formula-to-find-bearing-or-heading-angle-between-two-poi
 https://www.movable-type.co.uk/scripts/latlong.html
 https://www.sunearthtools.com/tools/distance.php
 
-FILE UTMOST REVIEW DONE ON 04.01.2021) BY ARTUR K. 
+FILE UTMOST REVIEW DONE ON 08.01.2021) BY ARTUR K. 
 ***********************************************************************/
 
 #ifndef ATL_MATH_HPP
 #define ATL_MATH_HPP
 
 #include <Core.hpp>
+
 #include "GlobalPosition.hpp"
 
 #include <cmath>
@@ -25,13 +26,13 @@ namespace atl
 	// CONSTANT DEFINITIONS
 	//-----------------------------------------------------------------------
 
-	const static scalar PI = 3.14159265;
-	const static scalar EARTHS_GRAVITY = 9.80665;					// Nominal "average" value [m/s^2]
-	const static scalar EARTH_RADIUS_M = 6371000.0;					// Nominal "average" value [km]
-	const static scalar EARTH_RADIUS_KM = EARTH_RADIUS_M / 1000.0;	// Nominal "average" value [m] 
+	const static scalar PI 									= 3.14159265;
+	const static scalar EARTHS_GRAVITY 						= 9.80665;					// Nominal "average" value [m/s^2]
+	const static scalar EARTH_RADIUS_M 						= 6371000.0;				// Nominal "average" value [km]
+	const static scalar EARTH_RADIUS_KM 					= EARTH_RADIUS_M / 1000.0;	// Nominal "average" value [m] 
 
-	const static scalar RATIO_OF_SPECIFIC_AIR_CAPACITY = 1.4;		// Polytropic exponent 
-	const static scalar SPECIFIC_GAS_AIR_CONSTANT = 287.0;			// R [J/kg]
+	const static scalar RATIO_OF_SPECIFIC_AIR_CAPACITY 		= 1.4;						// Polytropic exponent 
+	const static scalar SPECIFIC_GAS_AIR_CONSTANT 			= 287.0;					// R [J/kg]
 
 	//-----------------------------------------------------------------------
 	// FMATH

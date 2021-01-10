@@ -4,7 +4,7 @@ FILE CONTROLLERS.H CONTAINS CONTROLLER TEMPLATE CLASS IMPLEMENTATIONS.
 THE FILE CONTENT HAS BEEN CREATED TO SUPPORT "DEVELOPMENT OF FLIGHT
 CONTROL SYSTEM FOR MORPHING ELEVON CONTROL SURFACE", 2019 THESIS.
 
-FILE UTMOST REVIEW DONE ON (04.01.2021) BY ARTUR K.
+FILE UTMOST REVIEW DONE ON (08.01.2021) BY ARTUR K.
 ***********************************************************************/
 
 #ifndef ATL_CONTROLLERS_HPP
@@ -20,14 +20,14 @@ namespace atl
 	// P CONTROLLER TEMPLATE
 	//-----------------------------------------------------------------------
 
-	template <class T>
+	template< class T >
 	class TPController
 	{
 	public:
-		TPController(T Kp) : m_Kp(Kp) { }
+		TPController(T Kp) : m_Kp{ Kp } { }
 		~TPController() = default;
 
-		T calculateControlSignal(T desiredValue, T currentValue)
+		T calculateControlSignal( T desiredValue, T currentValue )
 		{
 			// Calculate error
 			T error = desiredValue - currentValue;
@@ -38,14 +38,14 @@ namespace atl
 			return proportionalTermOut;
 		}
 
-		void cap(T& value, T min, T max)
+		void cap( T& value, T min, T max )
 		{
 			if (value < min) value = min;
 			if (value > max) value = max;
 		}
 
 	private:
-		//Gains
+		// Gains
 		T m_Kp;
 	};
 
@@ -54,15 +54,15 @@ namespace atl
 	// PI CONTROLLER TEMPLATE
 	//-----------------------------------------------------------------------
 
-	template <class T>
+	template< class T >
 	class TPIController
 	{
 	public:
-		TPIController(T dt, T Kp, T Ki) 
-			: m_dt(dt) 
-			, m_Kp(Kp)
-			, m_Ki(Ki)
-			, m_integral(static_cast<T>(0.0)) {}
+		TPIController( T dt, T Kp, T Ki ) 
+			: m_dt{ dt } 
+			, m_Kp{ Kp }
+			, m_Ki{ Ki }
+			, m_integral{ static_cast< T >(0.0) } { }
 
 		~TPIController() = default;
 
@@ -120,24 +120,24 @@ namespace atl
 	// as they will be better performance wise, for micro controller. 
 	//-----------------------------------------------------------------------
 
-	template<class T>
+	template< class T >
 	class TPIDController
 	{
 	public:
-		CPIDControllerT(T dt, T max, T min, T Kp, T Kd, T Ki) 
-			: m_dt(dt)
-			, m_max(max)
-			, m_min(min) 
-			, m_Kp(Kp) 
-			, m_Kd(Kd) 
-			, m_Ki(Ki)
-			, m_integral(0.0)
-			, m_previousError(0.0) { }
+		CPIDControllerT( T dt, T max, T min, T Kp, T Kd, T Ki ) 
+			: m_dt{ dt }
+			, m_max{ max }
+			, m_min{ min } 
+			, m_Kp{ Kp } 
+			, m_Kd{ Kd } 
+			, m_Ki{ Ki }
+			, m_integral{ static_cast< T >( 0.0 ) }
+			, m_previousError{ static_cast< T >( 0.0 ) } { }
 
 		~CPIDControllerT() = default;
 
 		// desiredValue is also known as set point
-		T calculateControlSignal(T desiredValue, T currentValue)
+		T calculateControlSignal( T desiredValue, T currentValue )
 		{
 			// Calculate error
 			T error = desiredValue - currentValue;
@@ -169,13 +169,13 @@ namespace atl
 		}
 
 		// ****** TODO: Replace by std::cap !
-		void cap(T& value, T min, T max)
+		void cap( T& value, T min, T max )
 		{
 			if (value < min) value = min;
 			if (value > max) value = max;
 		}
 
-		void updateTimeStep(T timeStep)
+		void updateTimeStep( T timeStep )
 		{
 			m_dt = timeStep;
 		}

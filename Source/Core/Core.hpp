@@ -1,7 +1,7 @@
 ﻿/***********************************************************************
 FILE CORE.H CONTAINS CORE - PLATFORM SPECIFIC DEFINITIONS
 
-FILE UTMOST REVIEW DONE ON (04.01.2021) BY ARTUR K. 
+FILE UTMOST REVIEW DONE ON (08.01.2021) BY ARTUR K. 
 ***********************************************************************/
 
 #ifndef ATL_CORE_HPP
@@ -27,7 +27,6 @@ namespace atl
 #else
 	using scalar = float;
 #endif
-
 
 #define UNUSED(x) (void)(x)
 
