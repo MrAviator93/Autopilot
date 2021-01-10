@@ -5,6 +5,9 @@
 # Prerequisites
 *.d
 
+# We don't want to add anything from Build directory
+/Build/Make/*
+
 # Compiled Object files
 *.slo
 *.lo
