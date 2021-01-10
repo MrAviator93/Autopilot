@@ -22,7 +22,12 @@ namespace atl
 	//-----------------------------------------------------------------------
 	// TIMER
 	//
-	// Implementation is based on std::chrono high resolution clock.
+	// Based on high_resolution_clock clock.
+	//
+	// Conversion units:
+	// 1s = 1000ms 		(milli-seconds)
+	// 1s = 1000000us 	(micro-seconds)
+	// 1s = 1e+9ns		(nano-seconds)
 	//-----------------------------------------------------------------------
 
 	class CTimer
@@ -31,6 +36,7 @@ namespace atl
 		CTimer();
 
 		void start() { m_startTP = m_clock.now(); }
+
 		void reset() { this->start(); }
 
 		// Returns elapsed time in seconds.
@@ -44,6 +50,7 @@ namespace atl
 	
 		// Returns elapsed time in nanoseconds.
 		int64 getElapsedTimeNs();
+
 	private:
 		Clock m_clock;
 		TimePoint m_startTP;
