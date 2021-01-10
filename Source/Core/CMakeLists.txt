@@ -1,7 +1,8 @@
 set( LIB_NAME ATLCore)
 
 add_library( ${LIB_NAME} STATIC
-    ISATable.cpp   
+    ISATable.cpp  
+    CTimer.cpp
 )
 
 add_library( ATL::Core ALIAS ${LIB_NAME} )
