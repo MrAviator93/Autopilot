@@ -14,6 +14,8 @@ namespace atl
 	//-----------------------------------------------------------------------
 	// GLOBAL POSITION 
 	//
+	// ***** TODO: Rename to GeoPosition
+	//
 	// Note that float is inapplicable for latitude and longitude calculations.
 	//-----------------------------------------------------------------------
 
