@@ -1,0 +1,5 @@
+add_subdirectory( Common )
+add_subdirectory( Comms )
+add_subdirectory( Multithreading )
+add_subdirectory( Templates )
+add_subdirectory( Math )
