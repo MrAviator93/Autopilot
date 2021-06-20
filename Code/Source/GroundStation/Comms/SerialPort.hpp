@@ -13,27 +13,29 @@ FILE UTMOST REVIEW DONE ON (03.01.2021) BY ARTUR K.
 typedef unsigned int uint32;
 const static int MAX_ARDUINO_WAIT_TIME_MS = 2000;
 
-namespace atl {
+namespace atl
+{
 //-----------------------------------------------------------------------
 // BOUD RATE
 //-----------------------------------------------------------------------
 
-enum BoudRate {
-  BR_110 = 110,
-  BR_300 = 300,
-  BR_600 = 600,
-  BR_1200 = 1200,
-  BR_2400 = 2400,
-  BR_4800 = 4800,
-  BR_9600 = 9600,
-  BR_14400 = 14400,
-  BR_19200 = 19200,
-  CBR_38400 = 38400,
-  CBR_56000 = 56000,
-  CBR_57600 = 57600,
-  CBR_115200 = 115200,
-  CBR_128000 = 128000,
-  CBR_256000 = 256000
+enum BoudRate
+{
+	BR_110 = 110,
+	BR_300 = 300,
+	BR_600 = 600,
+	BR_1200 = 1200,
+	BR_2400 = 2400,
+	BR_4800 = 4800,
+	BR_9600 = 9600,
+	BR_14400 = 14400,
+	BR_19200 = 19200,
+	CBR_38400 = 38400,
+	CBR_56000 = 56000,
+	CBR_57600 = 57600,
+	CBR_115200 = 115200,
+	CBR_128000 = 128000,
+	CBR_256000 = 256000
 };
 
 //-----------------------------------------------------------------------
@@ -48,28 +50,32 @@ enum BoudRate {
 // If it does not match, the communication won't be established!
 //-----------------------------------------------------------------------
 
-class CSerialPort {
+class CSerialPort
+{
 public:
-  CSerialPort(const char *pPortName, BoudRate boudRate = BoudRate::BR_9600);
-  ~CSerialPort();
+	CSerialPort( const char* pPortName, BoudRate boudRate = BoudRate::BR_9600 );
+	~CSerialPort();
 
-  int readSerialPort(void *pBuffer, uint32 bufferSize);
-  int readSerialPort(char *pBuffer, uint32 bufferSize);
+	int readSerialPort( void* pBuffer, uint32 bufferSize );
+	int readSerialPort( char* pBuffer, uint32 bufferSize );
 
-  template <class T> int readSerialPort(T *pObject);
+	template < class T >
+	int readSerialPort( T* pObject );
 
-  bool writeSerialPort(char *pBuffer, uint32 bufferSize);
-  bool isConnected();
+	bool writeSerialPort( char* pBuffer, uint32 bufferSize );
+	bool isConnected();
 
 private:
-  bool m_initialized{false};
-  void *m_pHandle{nullptr}; // HANDLE
-  void *m_pStatus{nullptr}; // COMSTAT
-  uint32 m_errors{0};       // DWORD
+	bool m_initialized { false };
+	void* m_pHandle { nullptr }; // HANDLE
+	void* m_pStatus { nullptr }; // COMSTAT
+	uint32 m_errors { 0 }; // DWORD
 };
 
-template <class T> inline int CSerialPort::readSerialPort(T *pObject) {
-  return this->readSerialPort((void *)pObject, sizeof(T));
+template < class T >
+inline int CSerialPort::readSerialPort( T* pObject )
+{
+	return this->readSerialPort( (void*)pObject, sizeof( T ) );
 }
 
 } // namespace atl
