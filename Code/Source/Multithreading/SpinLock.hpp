@@ -191,6 +191,16 @@ namespace ATL::Core::Multithreading
 		std::atomic_bool m_locked;
 	};
 
+	template< typename T >
+	constexpr bool isMicroSpinlock()
+	{
+	    if constexpr( std::is_same_v< CMicroSpinLock, T > )
+	    {
+		return true;
+	    }
+
+	    return false;
+	}
 
 
 } // namespace ATL::Core::Multithreading
