@@ -65,8 +65,7 @@ if ( WIN32 )
 endif()
 
 find_package( pugixml REQUIRED )
-
-# set( date_DIR "${DATE_ROOT}/usr/local/lib/cmake/date/")
+find_package( fmt CONFIG REQUIRED )
 find_package( date REQUIRED )
 
 add_subdirectory( Source )
