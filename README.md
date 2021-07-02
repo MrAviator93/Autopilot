@@ -23,8 +23,8 @@ To install Docker follow the following document:<br/>
 https://docs.docker.com/engine/install/ubuntu/
 
 # Build-Linux
-In the root folder run the script configure.py
 To build and install the libraries do the following:
+* In root folder run configure.py script
 * cd into the Build folder
 * make -j8 (or num of available threads)
 * sudo make install
