@@ -5,7 +5,7 @@
 * [Motivation](#Motivation)
 * [Requirements](#Requirements)
 * [3rd Party](#3rd-Party)
-* [Development Environment and Formatting](#Dev-Environment-and-Formatting)
+* [Dev Environment and Formatting](#Dev-Environment-and-Formatting)
 * [Cross-compilation](#Cross-compilation)
 * [Build-Linux](#Build-Linux)
 * [Build-Windows](#Build-Windows)
