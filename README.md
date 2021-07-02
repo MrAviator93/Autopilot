@@ -148,7 +148,10 @@ You libraries will be installed under: "C:\usr\local\ directory"
 To compile the VADCore for windows see the following link:
 https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md#cmake-toolchain-file
 
-The best way to use installed libraries with cmake is via the toolchain file scripts\buildsystems\vcpkg.cmake. To use this file, you simply need to add it onto your CMake command line as: -DCMAKE_TOOLCHAIN_FILE=D:\src\vcpkg\scripts\buildsystems\vcpkg.cmake.
+The best way to use installed libraries with cmake is via the toolchain file scripts\buildsystems\vcpkg.cmake. To use this file, you simply need to add it onto your CMake command line as:
+```
+-DCMAKE_TOOLCHAIN_FILE=D:\src\vcpkg\scripts\buildsystems\vcpkg.cmake.
+```
 
 ## Building using MSBuild
 The following information will allow you to build the project using MSBuild.exe or Build-Release.py and Build-Debug.py scripts, without starting Visual Studio.
