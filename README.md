@@ -1,4 +1,16 @@
 # Autopilot
+
+# Table of contents
+* [Description](#Description)
+* [Motivation](#Motivation)
+* [Requirements](#Requirements)
+* [3rd Party](#3rd-Party)
+* [Development Environment and Formatting](#Dev-Environment-and-Formatting)
+* [Cross-compilation](#Cross-compilation)
+* [Build-Linux](#Build-Linux)
+* [Build-Windows](#Build-Windows)
+* [VCPKG-Notes](#VCPKG-Notes)
+
 # Description
 WIP. Autopilot is a PET type project that actually consists of three sub-projects: 
 1. Core library, based on which everything is build.
