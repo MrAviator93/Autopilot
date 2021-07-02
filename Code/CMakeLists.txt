@@ -24,6 +24,7 @@ endif()
 # endif(CMAKE_TOOLCHAIN_FILE)
 
 if ( WIN32 )
+    add_compile_definitions( _WIN32_WINNT=0x0A00 )
     set( VCPKG_TARGET_TRIPLET "x64-windows-static" CACHE STRING "We are building for x64 platform static libraries." )
     # set(CMAKE_TOOLCHAIN_FILE "C:/VCPCKG/vcpkg/scripts/buildsystems/vcpkg.cmake" CACHE STRING "Path for vcpkg.cmake")
     include( "C:/VCPCKG/vcpkg/scripts/buildsystems/vcpkg.cmake" )
