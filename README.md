@@ -18,6 +18,10 @@ Additionally the project comes with the .clang-format file, which contains the f
 2. Install Clang Format app ( in linux sudo apt-get install clang-format )
 3. In VS Code install the following extension: Clang-Format 1.10.0 by Michael Johns
 
+# Cross-compilation
+To install Docker follow the following document:<br/>
+https://docs.docker.com/engine/install/ubuntu/
+
 # Requirements
 A C++ compiler that supports C++ 17 revision, Boost C++ libraries and fmt formatting library.
 
