@@ -144,6 +144,30 @@ To build and install the libraries do the following:
 * Build Solution (F7)
 You libraries will be installed under: "C:\usr\local\ directory"
 
+# Windows Notes
+To compile the VADCore for windows see the following link:
+https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md#cmake-toolchain-file
 
+The best way to use installed libraries with cmake is via the toolchain file scripts\buildsystems\vcpkg.cmake. To use this file, you simply need to add it onto your CMake command line as: -DCMAKE_TOOLCHAIN_FILE=D:\src\vcpkg\scripts\buildsystems\vcpkg.cmake.
 
+## Building using MSBuild
+The following information will allow you to build the project using MSBuild.exe or Build-Release.py and Build-Debug.py scripts, without starting Visual Studio.
+
+To enable msbuild in Command Prompt, you simply must add the directory of the msbuild.exe to the PATH environment variable.
+
+You can access the environment variables by:
+
+Right clicking on Computer
+Click Properties
+Then click Advanced system settings on the left navigation bar
+On the next dialog box click Environment variables
+Scroll down to PATH
+Edit it to include your path to the framework (don't forget a ";" after the last entry in here).
+For reference, my path was C:\Windows\Microsoft.NET\Framework\v4.0.30319
+Path Updates:
+
+As of MSBuild 12 (2013)/VS 2013/.NET 4.5.1+ and onward MSBuild is now installed as a part of Visual Studio.
+For VS2015 the path was %ProgramFiles(x86)%\MSBuild\14.0\Bin
+For VS2017 the path was %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin
+For VS2019 the path was %ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin
 
