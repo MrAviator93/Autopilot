@@ -22,8 +22,15 @@ Additionally the project comes with the .clang-format file, which contains the f
 To install Docker follow the following document:<br/>
 https://docs.docker.com/engine/install/ubuntu/
 
-# Build
+# Build-Linux
 In the root folder run the script configure.py
+To build and install the libraries do the following:
+* cd into the Build folder
+* make -j8 (or num of available threads)
+* sudo make install
+
+# Build-Windows
+To be writen.
 
 # Requirements
 A C++ compiler that supports C++ 17 revision, Boost C++ libraries and fmt formatting library.
