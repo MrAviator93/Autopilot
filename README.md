@@ -14,7 +14,7 @@ Appart from being a C++ software engineer I am also an Aerospace Systems Enginee
 The project development is carried out in Visual Studio Code, in order to be able to autoformat the Clang-Format application must be installed on the operating system.
 Additionally the project comes with the .clang-format file, which contains the formating instructions for Clang-Format application.
 
-1. Check that inside "/Code/" directory there is .clan-format file
+1. Check that inside _"/Code/"_ directory there is _.clan-format_ file
 2. Install Clang Format app ( in linux ```sudo apt-get install clang-format``` )
 3. In VS Code install the following extension: Clang-Format 1.10.0 by Michael Johns
 
