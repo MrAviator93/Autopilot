@@ -114,6 +114,18 @@ sudo apt-get install -y doctest
 .\vcpkg.exe install pugixml:x64-windows-static
 ```
 
+## LIBSIGC++
+Used for signals
+
+```
+sudo apt-get install libsigc++-2.0-dev
+
+```
+
+```
+.\vcpkg.exe install libsigcpp-3:x64-windows-static
+```
+
 # Dev-Environment-and-Formatting
 The project development is carried out in Visual Studio Code, in order to be able to autoformat the Clang-Format application must be installed on the operating system.
 Additionally the project comes with the .clang-format file, which contains the formating instructions for Clang-Format application.
