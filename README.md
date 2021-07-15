@@ -115,16 +115,48 @@ sudo apt-get install -y doctest
 ```
 
 ## LIBSIGC++
-Used for signals
+Used for signals - we use version 3.0
 
 ```
-sudo apt-get install libsigc++-2.0-dev
+https://www.linuxfromscratch.org/blfs/view/svn/general/libsigc3.html
+
+Extract
+cd build
+cmake ../
+sudo make install
 
 ```
 
 ```
 .\vcpkg.exe install libsigcpp-3:x64-windows-static
 ```
+
+For Windows - vcpkg configuration it will be also necessery to edit __sigc++config.h__ file:
+
+1. ```vcpkg\installed\x64-windows-static\lib\sigc++-3.0\include\sigc++config.h```
+
+And actually it is necessery to one of them the "sigc++config.h"
+```
+/* Detect Win32 platform */
+#ifdef _WIN32
+# if defined(_MSC_VER)
+#  define SIGC_MSC 1
+#  define SIGC_WIN32 1
+#  define SIGC_DLL 1
+# elif defined(__CYGWIN__)
+#  define SIGC_CONFIGURE 1
+# elif defined(__MINGW32__)
+#  define SIGC_WIN32 1
+#  define SIGC_CONFIGURE 1
+# else
+#  error "libsigc++ config: Unknown win32 architecture (send me gcc --dumpspecs or equiv)"
+# endif
+#else /* !_WIN32 */
+# define SIGC_CONFIGURE 1
+#endif /* !_WIN32 */
+```
+
+For static builds we don't want __#  define SIGC_DLL 1__ to be defined!
 
 # Dev-Environment-and-Formatting
 The project development is carried out in Visual Studio Code, in order to be able to autoformat the Clang-Format application must be installed on the operating system.
